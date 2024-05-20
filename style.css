@@ -1,0 +1,184 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+div#color-picker-div{
+	display: block;
+	position: relative;
+	width: 90%;
+	height: 90vh;
+	user-select: none;
+}
+
+div#color-picker-div-outer{
+	position: absolute;
+	max-width: 100%;
+	max-height: 100%;
+	height: 100%;
+	aspect-ratio: 10/7;
+}
+
+div#color-picker-div-inner{
+	width: 100%;
+	padding-top: 70%;
+	position: absolute;
+	background-color: #ccc;
+	border: solid black min(.2vw, .3vh);
+}
+
+div#color-picker-div-margin{
+	width: 96%;
+	height: 96%;
+	margin-top: calc(2% / 10 * 7);
+	margin-left: 2%;
+	padding: 0;
+	position: absolute;
+	top: 0;
+}
+
+div#color-picker-graphic-container{
+	width: 100%;
+	height: calc(850% * 128 / 255 / 7);
+	top: 0;
+	position: absolute;
+}
+
+div#color-picker-div canvas{
+	top: 0;
+}
+
+canvas#canvas-gradient-rectangle{
+	position: absolute;
+	left: 0;
+	border: inset min(.2vw, .3vh);
+	width: 85%;
+}
+
+svg#color-canvas-cursor-container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: inset min(.2vw, .3vh);
+	width: 85%;
+	height: 100%;
+}
+
+canvas#canvas-brightness-slider{
+	position: absolute;
+	border: inset min(.2vw, .3vh);
+	width: 5.3125%;
+	height: 100%;
+	right: 5.3125%;
+}
+
+svg#canvas-brightness-pointer-container{
+	top: calc(0.2vw - 100% * 20 / 240 / 2);
+	position: absolute;
+	width: 5.3125%;
+	height: calc(100% * 260 / 240);
+	right: 0;
+}
+
+div#color-picker-data-container input[type=number]::-webkit-inner-spin-button, div#color-picker-data-container input[type=number]::-webkit-outer-spin-button {
+   	display: none;
+}
+
+div#color-picker-data-container input[type=number] {
+    border-radius: 0;
+    border: solid black min(.2vw, .3vh);
+}
+
+div#color-picker-data-container input[type=number]:focus {
+    outline: none;
+}
+
+div#color-picker-data-container {
+	position: absolute;
+	width: 100%;
+	height: 35%;
+	bottom: 0;
+}
+
+div#show-color {
+	position: absolute;
+	width: calc(24% - .3vw);
+	height: calc(100% - .3vw);
+	border: inset min(.2vw, .3vh);
+	bottom: 0;
+}
+
+div.color-data-column#d1{
+	left: 25%;
+}
+
+div.color-data-column{
+	position: absolute;
+	width: calc(100% * 3 / 8);
+	height: 100%;
+	top: 0;
+	overflow: visible;
+}
+
+div.color-data-column#d2{
+	left: calc(25% + 100% * 3 / 8);
+}
+
+div.color-data{
+	position: absolute;
+	height: calc(100% / 3);
+	width: 100%;
+	padding: 0;
+	overflow: visible;
+}
+
+div.color-data#d1{
+	top: 0;
+}
+
+div.color-data#d2{
+	top: calc(100% / 3);
+}
+
+div.color-data#d3{
+	top: calc(100% / 3 * 2);
+}
+
+div.color-data > div.paragraph{
+	position: absolute;
+	width: 60%;
+	overflow: visible;
+	height: 80%;
+	top: 10%;
+}
+
+div.color-data > div.paragraph > p{
+	overflow: visible;
+	line-height: 150%;
+	font-size: 120%;
+	margin: 0;
+	margin-top: 0%;
+	margin-right: 10%;
+	text-align: right;
+	font-family: system-ui;
+
+}
+
+div.color-data > div.input{
+	position: absolute;
+	right: 0;
+	width: 40%;
+	top: calc(10% / 35 * 60);
+	height: 60%;
+	overflow: visible;
+}
+
+div.input input {
+	width: 75%;
+	height: 80%;
+	position: absolute;
+	right: 0;
+	font-size: 120%;
+	padding: 5%;
+	padding-left: 10%;
+	line-height: 0 !important;
+}

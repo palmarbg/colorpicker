@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Páll Márton</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="color-picker-div">
+		<div id="color-picker-div-outer">
+			<div id="color-picker-div-inner">
+				<div id="color-picker-div-margin">
+					<div id="color-picker-graphic-container">
+						<canvas id="canvas-gradient-rectangle"></canvas>
+						<svg id="color-canvas-cursor-container" viewBox="13 13 510 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg id="color-canvas-cursor" x="0" y="0">
+								<rect x="11" width="4" height="8" fill="black"/>
+								<rect x="11" y="18" width="4" height="8" fill="black"/>
+								<rect y="11" width="8" height="4" fill="black"/>
+								<rect x="18" y="11" width="8" height="4" fill="black"/>
+							</svg>
+						</svg>
+						<canvas id="canvas-brightness-slider"></canvas>
+						<svg id="canvas-brightness-pointer-container" viewBox="0 0 20 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+		  					<svg id="canvas-brightness-pointer">
+		  						<polygon points="0,10 15,0 15,20" style="fill:black;" />
+		  					</svg>
+						</svg>
+					</div>
+					<div id="color-picker-data-container">
+						<div id="show-color"></div>
+						<div class="color-data-column" id="d1">
+							<div class="color-data" id="d1">
+								<div class="paragraph"><p>Árnyalat:</p></div>
+								<div class="input"><input type="number" name="shade" min="0" max="240" value="0"></div>
+							</div>
+							<div class="color-data" id="d2">
+								<div class="paragraph"><p>Telítettség:</p></div>
+								<div class="input"><input type="number" name="saturation" min="0" max="240" value="240"></div>
+							</div>
+							<div class="color-data" id="d3">
+								<div class="paragraph"><p>Fényerő:</p></div>
+								<div class="input"><input type="number" name="brightness" min="0" max="240" value="120"></div>
+							</div>
+						</div>
+						<div class="color-data-column" id="d2">
+							<div class="color-data" id="d1">
+								<div class="paragraph"><p>Vörös:</p></div>
+								<div class="input"><input type="number" name="red" min="0" max="255" value="255"></div>
+							</div>
+							<div class="color-data" id="d2">
+								<div class="paragraph"><p>Zöld:</p></div>
+								<div class="input"><input type="number" name="green" min="0" max="255" value="0"></div>
+							</div>
+							<div class="color-data" id="d3">
+								<div class="paragraph"><p>Kék:</p></div>
+								<div class="input"><input type="number" name="blue" min="0" max="255" value="0"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
